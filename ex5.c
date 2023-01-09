@@ -2,8 +2,6 @@
 
 float *criacao_vetor(int n);
 float max_vetor(int n, float *vet);
-void free_vetor(float *vet);
-
 int main (void) {
 
     int n; 
@@ -17,7 +15,7 @@ int main (void) {
     vetor = criacao_vetor(n);
     max_valor = max_vetor(n, vetor);
     printf("Maior valor do vetor = %.2f", max_valor);
-    free_vetor(vetor);
+    free(vetor);
 
     return 0;
 }
@@ -46,8 +44,4 @@ float max_vetor(int n, float *vet) {
         }
     }
     return max;
-}
-
-void free_vetor(float *vet) {
-    free(vet);
 }

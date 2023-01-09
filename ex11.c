@@ -8,6 +8,7 @@ typedef struct info {
 
 void criacao_vetor(int n, Info **vet);
 void analise(int n, Info **vet);
+void free_vetor(int n, Info **vet);
 
 int main (void) {
 
@@ -22,6 +23,7 @@ int main (void) {
     criacao_vetor(n, vetor);
     impressao(n, vetor);
     analise(n, vetor);
+    free_vetor(n, vetor);
 
     return 0;
 }
@@ -55,4 +57,13 @@ void analise(int n, Info **vet) {
     printf("Numero de mulheres com idade entre 20 e 35 anos = %d\n", n_mulheres);
     printf("Numero de homens com altura maior que 1.80m = %d", n_homens);
 
+}
+
+void free_vetor(int n, Info **vet) {
+    for(int i = 0; i < n; i++) {
+        if(vet[i] != NULL) {
+            free(vet[i]);
+            vet[i] = NULL;
+        }
+    }
 }

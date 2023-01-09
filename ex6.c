@@ -3,7 +3,6 @@
 int *criacao_vetor(int n);
 void impressao_vetor(int n, int *vet);
 int maiores(int n, int *vet, int x);
-void free_vetor(int *vet);
 
 int main (void) {
 
@@ -18,7 +17,7 @@ int main (void) {
     n_maiores = maiores(n, vetor, x);
     impressao_vetor(n, vetor);
     printf("\nTem %d numero(s) maior(es) que %d no vetor", n_maiores, x);
-    free_vetor(vetor);
+    free(vetor);
 
     return 0;
 }
@@ -51,8 +50,4 @@ int maiores(int n, int * vet, int x) {
         }
     }
     return n_maiores;
-}
-
-void free_vetor(int *vet) {
-    free(vet);
 }
