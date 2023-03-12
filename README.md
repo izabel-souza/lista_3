@@ -11,3 +11,5 @@
 <p>ex11: Read the following informations given by the user: age, height and sex of X people. Return the number of women whose ages are between 20 and 35. Return the number of men whose heights are above 1.80m</p>
 
 <p>ex12: Read character by character given by the user and stop when the user types ENTER('\r').</p>
+
+<p>ex 14: </p>
